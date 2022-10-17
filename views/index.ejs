@@ -5,12 +5,9 @@
   <title>Quebec</title>
 </head>
 <body>
+
   <h1> Player Info </h1>
-
   <br>
-
-
-
 
   <ul class = "players">
     <% for(var i=0; i< players.length; i++) { %>
@@ -22,7 +19,7 @@
     <% } %>
   </ul>
   
-    <form action="/players" method="POST">
+  <form action="/players" method="POST">
         <label for="player_name">Player</label>
             <input name="name" value="Dansby Swanson">
         <br>
