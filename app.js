@@ -34,11 +34,11 @@ app.post('/players', (req, res) => {
 })
 
 app.post('/deletePlayers/:id', (req, res) => {
+  console.log(req.params.id)
   client.connect;
-  client
-    .db("myFirstDatabse").collection("posts").collection.deleteOne(
-      { _id: ObjectId( req.params.id) }).then(result => {
-    res.redirect('/')}).catch(error => console.error(error))
+  client.db("myFirstDatabse").collection("posts").findOneAndDelete({ _id: ObjectId( req.params.id) })
+  .then(result => {res.redirect('/')})
+  .catch(error => console.error(error))
 })
     
 app.listen(PORT, 
